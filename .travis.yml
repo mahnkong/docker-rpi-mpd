@@ -15,9 +15,8 @@ script:
 - docker build -t mahnkong/docker-rpimpd .
 # push image
 - >
-  if [ "$TRAVIS_BRANCH" == "master" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
+  if [ "$TRAVIS_BRANCH" == "master" -o "$TRAVIS_TAG" != "" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
-    echo "travis tag = $TRAVIS_TAG"
     TAG=${TRAVIS_TAG:=latest}
     docker tag mahnkong/docker-rpimpd mahnkong/docker-rpimpd:$TAG
     docker push mahnkong/docker-rpimpd:$TAG
