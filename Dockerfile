@@ -1,4 +1,4 @@
-FROM armv7/armhf-debian:jessie
+FROM resin/rpi-raspbian:jessie
 
 MAINTAINER Andreas Mahnke <mahnkong@gmx.de>
 
