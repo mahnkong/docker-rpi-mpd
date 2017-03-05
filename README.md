@@ -1,4 +1,5 @@
 # docker-rpimpd - Docker image for MPD on a raspberrypi
+![Travis build status](https://api.travis-ci.org/mahnkong/docker-rpimpd.svg?branch=master)
 
 ## Usage
 
