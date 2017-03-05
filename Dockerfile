@@ -1,6 +1,8 @@
-FROM resin/rpi-raspbian:jessie
+FROM armv7/armhf-debian:jessie
 
 MAINTAINER Andreas Mahnke <mahnkong@gmx.de>
+
+COPY qemu-arm-static /usr/bin/qemu-arm-static
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y mpd mpc \
