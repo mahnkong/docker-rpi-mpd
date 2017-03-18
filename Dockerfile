@@ -12,6 +12,6 @@ EXPOSE 6600
 
 RUN DEBIAN_FRONTEND=noninteractive apt-get update \
     && DEBIAN_FRONTEND=noninteractive apt-get install -y mpd mpc \
-    && apt-get autoremove -y && rm -f /usr/bin/qemu-arm-static
+    && apt-get autoremove -y
 
 ENTRYPOINT ["/opt/mpd-entrypoint.sh"]
