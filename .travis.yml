@@ -12,13 +12,13 @@ before_script:
 script:
 - cp /usr/bin/qemu-arm-static .
 # build image
-- docker build -t mahnkong/docker-rpimpd .
+- docker build -t mahnkong/docker-rpi-mpd .
 # push image
 - >
   if [ "$TRAVIS_BRANCH" == "master" -o "$TRAVIS_TAG" != "" ] && [ "$TRAVIS_PULL_REQUEST" == "false" ]; then
     docker login -u="$DOCKER_USER" -p="$DOCKER_PASS"
     TAG=${TRAVIS_TAG:=latest}
-    docker tag mahnkong/docker-rpimpd mahnkong/docker-rpimpd:$TAG
-    docker push mahnkong/docker-rpimpd:$TAG
-    docker push mahnkong/docker-rpimpd
+    docker tag mahnkong/docker-rpi-mpd mahnkong/docker-rpi-mpd:$TAG
+    docker push mahnkong/docker-rpi-mpd:$TAG
+    docker push mahnkong/docker-rpi-mpd
   fi
