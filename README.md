@@ -1,11 +1,11 @@
-# docker-rpimpd - Docker image for MPD on a raspberrypi
-![Travis build status](https://api.travis-ci.org/mahnkong/docker-rpimpd.svg?branch=master)
+# docker-rpi-mpd - Docker image for MPD on a raspberrypi
+![Travis build status](https://api.travis-ci.org/mahnkong/docker-rpi-mpd.svg?branch=master)
 
 ## Usage
 
 A typical invocation of the container would be:
 ```
-docker run --privileged -v /path/to/music:/mnt/music -v /path/to/mpddata:/mnt/mpd -p 6600:6600 mahnkong/docker-rpimpd
+docker run --privileged -v /path/to/music:/mnt/music -v /path/to/mpddata:/mnt/mpd -p 6600:6600 mahnkong/docker-rpi-mpd
 ```
 
 ## Environment Variables
