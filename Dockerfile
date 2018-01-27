@@ -1,4 +1,4 @@
-FROM armv7/armhf-debian:jessie
+FROM armhf/debian:stretch
 
 MAINTAINER Andreas Mahnke <mahnkong@gmx.de>
 
